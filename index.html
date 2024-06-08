@@ -21,6 +21,8 @@
             background-color: #f4f4f4;
             padding: 10px 0;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
         }
         nav a {
             text-decoration: none;
@@ -115,10 +117,15 @@
         <h1>Tienda de Ropa</h1>
     </header>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">catalogo</a>
-        <a href="contacto.html">Contacto</a>
-        <span id="usuario-info"></span>
+        <div>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Admin</a>
+        </div>
+        <div id="user-info">
+            <a href="login.html" id="login-link">Iniciar Sesión</a>
+        </div>
     </nav>
     <div class="hero">
         <div>
@@ -169,18 +176,22 @@
     <footer>
         <p>Derechos Reservados &copy; 2024 Tienda de Ropa</p>
     </footer>
-    <<script>
-        // Lógica para mostrar el email del usuario o "Iniciar Sesión"
-        document.addEventListener("DOMContentLoaded", function() {
-            const usuarioInfo = document.getElementById("usuario-info");
-            const emailUsuario = sessionStorage.getItem('email');
 
-            if (emailUsuario) {
-                usuarioInfo.textContent = emailUsuario;
-            } else {
-                usuarioInfo.innerHTML = '<a href="login.html">Iniciar Sesión</a>';
-            }
-        });
+    <script>
+        // Petición para obtener el estado de la sesión
+        fetch('session_status.php')
+            .then(response => response.json())
+            .then(data => {
+                const userInfo = document.getElementById('user-info');
+                const loginLink = document.getElementById('login-link');
+                if (data.loggedIn) {
+                    loginLink.style.display = 'none';
+                    userInfo.innerHTML = `<span>${data.email}</span> <a href="logout.php" id="cerrar-sesion">Cerrar Sesión</a>`;
+                } else {
+                    loginLink.style.display = 'inline';
+                }
+            })
+            .catch(error => console.error('Error:', error));
     </script>
 </body>
 </html>
