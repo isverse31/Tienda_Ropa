@@ -1,0 +1,461 @@
+/* Estilos básicos */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container, .box, .titulo, .content, .redes-sociales {
+    width: 90%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    
+}
+h1 {
+    font-size: 2.5em; /* Aumento del tamaño del texto */
+    margin: 0; /* Eliminación del margen superior e inferior */
+}
+
+header {
+    background-color: #C0C0C0;
+    color: #fff;
+    padding: 20px 0; /* Ajusta el espacio interno del encabezado */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Asegura que el encabezado esté en la parte superior */
+}
+
+nav {
+    float: right;
+    margin-top: 10px; /* Ajusta el margen superior */
+}
+
+nav ul {
+    color: #008080;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #008080;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #ffd700; /* Cambio de color al pasar el mouse */
+}
+
+main {
+    padding-top: 20px; /* Ajusta el espacio para que el contenido no se superponga con el encabezado */
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+        .box figure {
+            width: 277px;
+            height: 277px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+           margin-left: 35px;
+        }
+        .box figure img {
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            object-fit: cover;
+        }
+        .redes-sociales {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.7);
+            height: 0%;
+            line-height: 260px;
+            transition: all 500ms ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+/* Estilos para la sección de inicio (hero) */
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Estilos para las ofertas especiales */
+#ofertas {
+    background-color: #008080;
+    padding: 50px 0;
+}
+
+.special-offers {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.offer {
+    text-align: center;
+}
+
+.offer img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 20px 30px 30px;
+}
+
+/* Estilos para los testimonios de clientes */
+#testimonios {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.testimonial {
+    text-align: center;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Estilos adicionales para mejorar la apariencia de la página de catálogo */
+
+/* Estilos para la sección de catálogo */
+#catalogo {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#catalogo h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.producto h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.producto button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #45a049;
+}
+
+
+/* contacto */
+/* Estilos adicionales para mejorar la apariencia de la página de contacto */
+
+.about-us {
+    color: black;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-us__content {
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.about-us__image img {
+    color: #555;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us__text {
+    flex: 1;
+}
+
+.more-about-us {
+    color: #008080;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.team-member {
+    color: black    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.team-member__image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member__info {
+    text-align: left;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    border-radius: 50%;
+  }
+
+.social-icon:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* agrega un efecto de sombra al hacer clic */
+  }
+
+
+/* Estilos para el formulario de contacto */
+/* Estilos para el formulario de contacto */
+#contacto {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #333; /* Cambio de color del título */
+}
+
+#contacto p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666; /* Color de texto más suave */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 30px; /* Aumento del espacio entre los campos */
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 15px; /* Reducción del espacio entre las etiquetas */
+    color: #333; /* Cambio de color de etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px; /* Aumento del tamaño del relleno */
+    font-size: 1.1em; /* Aumento del tamaño de fuente */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Aumento del radio de borde */
+    transition: border-color 0.3s ease; /* Transición suave de color de borde */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 200px; /* Aumento de la altura mínima */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px; /* Aumento del tamaño del botón */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/*login*/
+.login-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button-group {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  

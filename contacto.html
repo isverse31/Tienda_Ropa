@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        .descripcion {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .descripcion h2 {
+            margin-bottom: 20px;
+        }
+        .formulario {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .formulario label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .formulario textarea {
+            height: 100px;
+        }
+        .formulario input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .formulario input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 600px) {
+            #cerrar-sesion {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa</h1>
+    </header>
+    <nav>
+        <a href="index.html"">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="login.html">Admin</a>
+    </nav>
+    <div class="descripcion">
+        <h2>Bienvenido a nuestra tienda de ropa</h2>
+        <p>Somos una tienda especializada en ofrecerte las últimas tendencias en moda para hombres, mujeres y niños. Nuestro objetivo es brindarte prendas de alta calidad a precios accesibles para que puedas lucir increíble en cualquier ocasión.</p>
+    </div>
+<br><br>
+<center>
+    <h2>
+        Queremos saber tu opinión
+    </h2>
+</center>
+    <div class="formulario">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <footer>
+        <p>Derechos Reservados &copy; 2024 Tienda de Ropa</p>
+    </footer>
+</body>
+</html>

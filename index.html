@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda de Ropa</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        .hero {
+            background-image: url('img/images.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .boton-cta {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .boton-cta:hover {
+            background-color: #555;
+        }
+        .ofertas {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+        .ofertas h2 {
+            margin-bottom: 20px;
+        }
+        .oferta {
+            display: inline-block;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .oferta img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .oferta h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .oferta p {
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .oferta .precio {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            #cerrar-sesion {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">catalogo</a>
+        <a href="contacto.html">Contacto</a>
+        <span id="usuario-info"></span>
+    </nav>
+    <div class="hero">
+        <div>
+            <h2>Bienvenido a nuestra tienda de ropa</h2>
+            <p>Descubre las últimas tendencias en moda para hombres, mujeres y niños.</p>
+            <a href="catalogo.html" class="boton-cta">Ver catálogo</a>
+        </div>
+    </div>
+    <div class="ofertas">
+        <h2>Ofertas Especiales</h2>
+        <div class="oferta">
+            <img src="img/falda.jpeg" alt="Oferta 1">
+            <h3>Falda Estampada</h3>
+            <p>¡Compra 2 y llévate 1 gratis!</p>
+            <p class="precio">60.50</p>
+        </div>
+        <div class="oferta">
+            <img src="img/pantalon.jpeg" alt="Oferta 2">
+            <h3>Pantalones Vaqueros</h3>
+            <p>Ahorra un 30% en nuestra selección de jeans.</p>
+            <p class="precio">$29.99</p>
+        </div>
+        <div class="oferta">
+            <img src="img/sueter.jpeg" alt="Oferta 3">
+            <h3>Sueter</h3>
+            <p>¡Últimas unidades disponibles!</p>
+            <p class="precio">$39.99</p>
+        </div>
+        <div class="oferta">
+            <img src="img/camisetas.jpeg" alt="Oferta 1">
+            <h3>Camiseta para caballero</h3>
+            <p>¡Compra 2 y llévate 1 gratis!</p>
+            <p class="precio">60.50</p>
+        </div>
+        <div class="oferta">
+            <img src="img/sudadera.jpeg" alt="Oferta 2">
+            <h3>Sudadera para dama</h3>
+            <p>Ahorra un 30% en nuestra selección de jeans.</p>
+            <p class="precio">$29.99</p>
+        </div>
+        <div class="oferta">
+            <img src="img/chaqueta.jpeg " alt="Oferta 3">
+            <h3>Chaqueta</h3>
+            <p>¡Últimas unidades disponibles!</p>
+            <p class="precio">$39.99</p>
+        </div>
+    </div>
+    <footer>
+        <p>Derechos Reservados &copy; 2024 Tienda de Ropa</p>
+    </footer>
+    <<script>
+        // Lógica para mostrar el email del usuario o "Iniciar Sesión"
+        document.addEventListener("DOMContentLoaded", function() {
+            const usuarioInfo = document.getElementById("usuario-info");
+            const emailUsuario = sessionStorage.getItem('email');
+
+            if (emailUsuario) {
+                usuarioInfo.textContent = emailUsuario;
+            } else {
+                usuarioInfo.innerHTML = '<a href="login.html">Iniciar Sesión</a>';
+            }
+        });
+    </script>
+</body>
+</html>
